@@ -1,5 +1,5 @@
 #!/bin/bash 
 
-/usr/local/spark/sbin/start-master.sh  -h samver3.dei.polimi.it
-/usr/local/spark/sbin/start-history-server.sh
-/usr/local/spark/sbin/start-slave.sh  samver3.dei.polimi.it:7077 --port 9999
+$SPARK_HOME/sbin/start-master.sh  -h $SPARK_MASTER
+$SPARK_HOME/sbin/start-history-server.sh
+$SPARK_HOME/sbin/start-slave.sh  $SPARK_MASTER:7077 --port 9999
